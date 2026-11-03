@@ -5,26 +5,26 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 40px 50px;
+  padding: 44px 50px; /* Точный отступ из макета */
 }
 
 .header__links-list {
   display: flex;
-  gap: 20px;
+  gap: 32px; /* Точное расстояние между пунктами меню */
   list-style: circle;
 }
 
 .header__links-list-item {
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .header__links-list-item_no-bullit {
   list-style: none;
-  margin-left: 0;
 }
 
 .header__link {
   text-decoration: underline;
+  font-size: 18px; /* Размер шрифта меню */
 }
 
 .header__link_active {
@@ -47,6 +47,7 @@
   align-items: flex-start;
   font-style: normal;
   line-height: 1.4;
+  font-size: 18px;
 }
 
 .header__address {
@@ -70,7 +71,6 @@
   padding: 165px 50px 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .overlay {
@@ -87,11 +87,15 @@
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Заставляет заголовок растянуться на всю высоту обложки */
   font-size: 100px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 115px;
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .aligned-text {
@@ -111,7 +115,7 @@
 }
 
 .letter-spacing-extended {
-  letter-spacing: 0.3em;
+  letter-spacing: 30px;
 }
 
 .no-letter-spacing {
@@ -128,7 +132,7 @@
   color: #fff;
   font-size: 22px;
   text-transform: uppercase;
-  word-spacing: 0.6em;
+  word-spacing: 18px; /* Расстояние между словами подзаголовка */
 }
 
 .bet-button {
@@ -138,13 +142,14 @@
   padding: 12px 32px;
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 22px;
 }
 
 /* =========================================
    ЛОТЫ (LOTS)
    ========================================= */
 .lots {
-  padding: 180px 50px 120px; /* Отступы сверху и снизу */
+  padding: 180px 50px 120px;
 }
 
 .lots__heading {
@@ -152,13 +157,12 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 27px;
-  margin-left: 40px; /* Выравнивание под карточки */
 }
 
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 25px; /* Отступ между карточками */
   list-style: none;
 }
 
@@ -221,7 +225,6 @@
 .lots__look-more-link {
   display: block;
   margin-top: 30px;
-  margin-left: 40px;
   font-size: 20px;
 }
 
@@ -230,7 +233,7 @@
    ========================================= */
 .about {
   display: grid;
-  grid-template-columns: 330px 1fr; /* Левая колонка фиксированная, правая занимает остаток */
+  grid-template-columns: 330px 1fr; /* Левая колонка равна ширине карточки */
   gap: 25px;
   padding: 0 50px 120px;
 }
@@ -243,7 +246,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; /* Центрируем круг внутри колонки */
+  margin: 0 auto; /* Центрируем круг в колонке */
 }
 
 .about__logo-image {
@@ -291,6 +294,7 @@
 
 .footer__menu-link {
   text-decoration: underline;
+  font-size: 18px;
 }
 
 .footer__menu-link_active {
