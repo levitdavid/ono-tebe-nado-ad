@@ -5,12 +5,12 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 44px 50px; /* Точный отступ из макета */
+  padding: 92px 50px 96px; /* Точные отступы из макета */
 }
 
 .header__links-list {
   display: flex;
-  gap: 32px; /* Точное расстояние между пунктами меню */
+  gap: 32px;
   list-style: circle;
 }
 
@@ -24,7 +24,7 @@
 
 .header__link {
   text-decoration: underline;
-  font-size: 18px; /* Размер шрифта меню */
+  font-size: 18px;
 }
 
 .header__link_active {
@@ -51,7 +51,7 @@
 }
 
 .header__address {
-  max-width: 200px;
+  max-width: 240px;
   justify-self: end;
 }
 
@@ -89,7 +89,7 @@
 .cover__title {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Заставляет заголовок растянуться на всю высоту обложки */
+  flex-grow: 1;
   font-size: 100px;
   font-weight: 700;
   line-height: 115px;
@@ -132,7 +132,7 @@
   color: #fff;
   font-size: 22px;
   text-transform: uppercase;
-  word-spacing: 18px; /* Расстояние между словами подзаголовка */
+  word-spacing: 18px;
 }
 
 .bet-button {
@@ -146,10 +146,10 @@
 }
 
 /* =========================================
-   ЛОТЫ (LOTS)
+   ЛОТЫ (LOTS) - Идеальная подгонка
    ========================================= */
 .lots {
-  padding: 180px 50px 120px;
+  padding: 180px 25px 120px; /* Сделали по 25px, чтобы карточки влезли в 1100px */
 }
 
 .lots__heading {
@@ -162,13 +162,13 @@
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px; /* Отступ между карточками */
+  gap: 25px; /* 334*3 + 25*2 = 1052px. Идеально встает */
   list-style: none;
 }
 
 .lots__card-list-item {
-  width: 330px;
-  min-height: 464px;
+  width: 334px;
+  min-height: 450px;
 }
 
 .card-link {
@@ -233,9 +233,9 @@
    ========================================= */
 .about {
   display: grid;
-  grid-template-columns: 330px 1fr; /* Левая колонка равна ширине карточки */
+  grid-template-columns: 334px 1fr; /* Выровняли по ширине карточек */
   gap: 25px;
-  padding: 0 50px 120px;
+  padding: 0 25px 120px;
 }
 
 .about__logo {
@@ -246,7 +246,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; /* Центрируем круг в колонке */
+  margin: 0 auto;
 }
 
 .about__logo-image {
