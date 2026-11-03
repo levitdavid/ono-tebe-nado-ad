@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 96px; /* Точные отступы из макета */
+  padding: 24px 50px; /* Уменьшили отступ, чтобы шапка была компактнее */
 }
 
 .header__links-list {
@@ -60,7 +60,7 @@
 }
 
 /* =========================================
-   ОБЛОЖКА (COVER)
+   ОБЛОЖКА (COVER) - Исправлено!
    ========================================= */
 .cover {
   position: relative;
@@ -89,13 +89,13 @@
 .cover__title {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  justify-content: space-between; /* Распределяет строки по всей высоте */
+  flex-grow: 1; /* Заставляет заголовок занять всё свободное место */
   font-size: 100px;
   font-weight: 700;
   line-height: 115px;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 50px;
 }
 
 .aligned-text {
@@ -146,10 +146,10 @@
 }
 
 /* =========================================
-   ЛОТЫ (LOTS) - Идеальная подгонка
+   ЛОТЫ (LOTS) - Исправлено, чтобы карточки встали в 1 ряд
    ========================================= */
 .lots {
-  padding: 180px 25px 120px; /* Сделали по 25px, чтобы карточки влезли в 1100px */
+  padding: 180px 25px 120px;
 }
 
 .lots__heading {
@@ -161,14 +161,15 @@
 
 .lots__card-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 25px; /* 334*3 + 25*2 = 1052px. Идеально встает */
+  flex-wrap: wrap; /* Разрешаем перенос, но мы его предотвратим шириной */
+  gap: 30px; /* Идеальный зазор: 330*3 + 30*2 = 1050px (влезает в 1100 - 25*2) */
   list-style: none;
 }
 
 .lots__card-list-item {
-  width: 334px;
+  width: 330px;
   min-height: 450px;
+  flex-shrink: 0; /* Запрещаем карточкам сжиматься (это предотвратит перенос) */
 }
 
 .card-link {
@@ -229,12 +230,12 @@
 }
 
 /* =========================================
-   ОБ АУКЦИОНЕ (ABOUT)
+   ОБ АУКЦИОНЕ (ABOUT) - Исправлено выравнивание
    ========================================= */
 .about {
   display: grid;
-  grid-template-columns: 334px 1fr; /* Выровняли по ширине карточек */
-  gap: 25px;
+  grid-template-columns: 330px 1fr;
+  gap: 30px;
   padding: 0 25px 120px;
 }
 
@@ -257,7 +258,7 @@
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 100px;
+  margin-top: 0; /* Убрали отступ сверху, чтобы выровнять с кругом */
   margin-bottom: 100px;
 }
 
@@ -276,7 +277,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  padding: 180px 50px 50px;
+  padding: 120px 50px 50px; /* Уменьшили верхний отступ */
 }
 
 .footer__address {
