@@ -5,17 +5,20 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 24px 50px; /* Уменьшили отступ, чтобы шапка была компактнее */
+  padding: 92px 50px 96px; /* Жесткие отступы из макета */
 }
 
 .header__links-list {
   display: flex;
   gap: 32px;
   list-style: circle;
+  margin: 0;
+  padding: 0;
 }
 
 .header__links-list-item {
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header__links-list-item_no-bullit {
@@ -25,6 +28,7 @@
 .header__link {
   text-decoration: underline;
   font-size: 18px;
+  line-height: 1.2;
 }
 
 .header__link_active {
@@ -60,7 +64,7 @@
 }
 
 /* =========================================
-   ОБЛОЖКА (COVER) - Исправлено!
+   ОБЛОЖКА (COVER) - Точная копия
    ========================================= */
 .cover {
   position: relative;
@@ -86,11 +90,13 @@
   z-index: 2;
 }
 
+/* Вот тут магия, которая растягивает слова на всю высоту */
 .cover__title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Распределяет строки по всей высоте */
-  flex-grow: 1; /* Заставляет заголовок занять всё свободное место */
+  justify-content: space-between; 
+  flex-grow: 1; 
+  margin-bottom: 50px;
   font-size: 100px;
   font-weight: 700;
   line-height: 115px;
@@ -146,10 +152,10 @@
 }
 
 /* =========================================
-   ЛОТЫ (LOTS) - Исправлено, чтобы карточки встали в 1 ряд
+   ЛОТЫ (LOTS) - Точная ширина карточек
    ========================================= */
 .lots {
-  padding: 180px 25px 120px;
+  padding: 180px 24px 120px; /* Отступ 24px, чтобы влезло 3 карточки по 334px */
 }
 
 .lots__heading {
@@ -157,19 +163,22 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 27px;
+  margin-left: 0;
 }
 
 .lots__card-list {
   display: flex;
-  flex-wrap: wrap; /* Разрешаем перенос, но мы его предотвратим шириной */
-  gap: 30px; /* Идеальный зазор: 330*3 + 30*2 = 1050px (влезает в 1100 - 25*2) */
+  flex-wrap: wrap;
+  gap: 25px; /* 334*3 + 25*2 = 1052px (идеально) */
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .lots__card-list-item {
-  width: 330px;
-  min-height: 450px;
-  flex-shrink: 0; /* Запрещаем карточкам сжиматься (это предотвратит перенос) */
+  width: 334px; /* Точная ширина */
+  min-height: 596px; /* Точная высота карточки */
+  flex-shrink: 0;
 }
 
 .card-link {
@@ -230,13 +239,13 @@
 }
 
 /* =========================================
-   ОБ АУКЦИОНЕ (ABOUT) - Исправлено выравнивание
+   ОБ АУКЦИОНЕ (ABOUT)
    ========================================= */
 .about {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 30px;
-  padding: 0 25px 120px;
+  grid-template-columns: 334px 1fr; /* Левая колонка по ширине карточки */
+  gap: 25px;
+  padding: 120px 24px 120px;
 }
 
 .about__logo {
@@ -258,7 +267,7 @@
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0; /* Убрали отступ сверху, чтобы выровнять с кругом */
+  margin-top: 100px; /* Выравнивание заголовка относительно круга */
   margin-bottom: 100px;
 }
 
@@ -277,7 +286,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  padding: 120px 50px 50px; /* Уменьшили верхний отступ */
+  padding: 180px 50px 50px;
 }
 
 .footer__address {
@@ -291,6 +300,8 @@
 .footer__menu-list {
   list-style: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__menu-link {
@@ -307,6 +318,8 @@
   gap: 15px;
   list-style: none;
   justify-self: end;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__social-icon {
