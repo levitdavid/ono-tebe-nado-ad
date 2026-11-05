@@ -1,24 +1,18 @@
-/* =========================================
-   ОБЩИЕ НАСТРОЙКИ И ШАПКА
-   ========================================= */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 96px; /* Жесткие отступы из макета */
+  padding: 92px 50px 96px;
 }
 
 .header__links-list {
   display: flex;
   gap: 32px;
   list-style: circle;
-  margin: 0;
-  padding: 0;
 }
 
 .header__links-list-item {
-  margin: 0;
-  padding: 0;
+  margin-left: 0;
 }
 
 .header__links-list-item_no-bullit {
@@ -28,7 +22,6 @@
 .header__link {
   text-decoration: underline;
   font-size: 18px;
-  line-height: 1.2;
 }
 
 .header__link_active {
@@ -63,9 +56,6 @@
   text-decoration: none;
 }
 
-/* =========================================
-   ОБЛОЖКА (COVER) - Точная копия
-   ========================================= */
 .cover {
   position: relative;
   min-height: 757px;
@@ -90,12 +80,11 @@
   z-index: 2;
 }
 
-/* Вот тут магия, которая растягивает слова на всю высоту */
 .cover__title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  flex-grow: 1; 
+  flex-grow: 1;
+  justify-content: space-between;
   margin-bottom: 50px;
   font-size: 100px;
   font-weight: 700;
@@ -151,11 +140,8 @@
   font-size: 22px;
 }
 
-/* =========================================
-   ЛОТЫ (LOTS) - Точная ширина карточек
-   ========================================= */
 .lots {
-  padding: 180px 24px 120px; /* Отступ 24px, чтобы влезло 3 карточки по 334px */
+  padding: 180px 24px 120px;
 }
 
 .lots__heading {
@@ -163,21 +149,18 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 27px;
-  margin-left: 0;
 }
 
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px; /* 334*3 + 25*2 = 1052px (идеально) */
+  gap: 25px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .lots__card-list-item {
-  width: 334px; /* Точная ширина */
-  min-height: 596px; /* Точная высота карточки */
+  width: 334px;
+  min-height: 596px;
   flex-shrink: 0;
 }
 
@@ -238,12 +221,9 @@
   font-size: 20px;
 }
 
-/* =========================================
-   ОБ АУКЦИОНЕ (ABOUT)
-   ========================================= */
 .about {
   display: grid;
-  grid-template-columns: 334px 1fr; /* Левая колонка по ширине карточки */
+  grid-template-columns: 334px 1fr;
   gap: 25px;
   padding: 120px 24px 120px;
 }
@@ -267,7 +247,7 @@
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 100px; /* Выравнивание заголовка относительно круга */
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -279,9 +259,6 @@
   line-height: 1.4;
 }
 
-/* =========================================
-   ПОДВАЛ (FOOTER)
-   ========================================= */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -300,8 +277,6 @@
 .footer__menu-list {
   list-style: none;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
 .footer__menu-link {
@@ -318,8 +293,6 @@
   gap: 15px;
   list-style: none;
   justify-self: end;
-  margin: 0;
-  padding: 0;
 }
 
 .footer__social-icon {
