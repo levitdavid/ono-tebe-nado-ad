@@ -30,7 +30,7 @@
 
 .header__logo {
   display: block;
-  width: 130px;
+  width: 134px; /* было 130px: в эталоне логотип чуть крупнее */
 }
 
 .header__logo-image {
@@ -48,7 +48,9 @@
 }
 
 .header__address {
+  box-sizing: border-box;
   max-width: 240px;
+  padding-right: 10px; /* в эталоне адрес переносится после "263-" */
   justify-self: end;
 }
 
@@ -84,7 +86,8 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: flex-start; /* было space-between: строки разъезжались */
+  gap: 20px; /* 115px line-height + 20px = шаг строк ~135px как в эталоне */
   margin-bottom: 50px;
   font-size: 100px;
   font-weight: 700;
@@ -145,6 +148,7 @@
 }
 
 .lots__heading {
+  margin-left: 40px; /* в эталоне заголовок сдвинут вправо относительно карточек */
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
@@ -218,6 +222,7 @@
 .lots__look-more-link {
   display: block;
   margin-top: 30px;
+  margin-left: 40px; /* как у заголовка */
   font-size: 20px;
 }
 
@@ -225,7 +230,7 @@
   display: grid;
   grid-template-columns: 334px 1fr;
   gap: 25px;
-  padding: 120px 24px 120px;
+  padding: 32px 24px 120px; /* было 120px сверху: в эталоне блок ближе к лотам */
 }
 
 .about__logo {
@@ -255,15 +260,15 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  font-size: 20px;
-  line-height: 1.4;
+  font-size: 19px; /* по замеру с эталона; было 20px */
+  line-height: 24px; /* было 1.4 (28px) */
 }
 
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  padding: 180px 50px 50px;
+  padding: 60px 50px 50px; /* было 180px сверху */
 }
 
 .footer__address {
@@ -290,7 +295,7 @@
 
 .footer__social-list {
   display: flex;
-  gap: 15px;
+  gap: 48px; /* было 15px */
   list-style: none;
   justify-self: end;
 }
