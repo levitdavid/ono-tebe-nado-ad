@@ -30,7 +30,7 @@
 
 .header__logo {
   display: block;
-  width: 134px; /* было 130px: в эталоне логотип чуть крупнее */
+  width: 136px; /* было 130px: в эталоне логотип чуть крупнее */
 }
 
 .header__logo-image {
@@ -260,7 +260,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  font-size: 19px; /* по замеру с эталона; было 20px */
+  font-size: 20px;
   line-height: 24px; /* было 1.4 (28px) */
 }
 
